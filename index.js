@@ -5,6 +5,7 @@ const { GoalNear, GoalBlock } = require("mineflayer-pathfinder").goals;
 const pvp = require("mineflayer-pvp").plugin;
 const { Client, GatewayIntentBits } = require("discord.js");
 const mineflayerViewer = require("prismarine-viewer").mineflayer;
+require("dotenv").config();
 
 const heads = [
   "ewogICJ0aW1lc3RhbXAiIDogMTYwMjcxOTE2NDgzMywKICAicHJvZmlsZUlkIiA6ICJhZDJjYzAyMjUxNWU0YjNiYjY4ZWU2YTlkZjEwYzFiOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTd2FydGgiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDYxNmJhMWI0MTI1Y2M3NDhhNTZkZjYyMjNlNjkxOWIxZTRlMGFjNTc3OWU3MDgxYzdjNzc1Zjg0ZWFmY2ZlNyIKICAgIH0KICB9Cn0=",
@@ -190,6 +191,4 @@ client.on("ready", () => {
   recursiveTryCreateBot();
 });
 
-client.login(
-  "NzkwNjQ4NzY1MDg5NTc5MDEw.GlYJ_3.Dtp_5HdQdsKHEfbooMGJTR6uHNY6RDCMzpnJ1A"
-);
+client.login(process.env.DISCORD_TOKEN);
