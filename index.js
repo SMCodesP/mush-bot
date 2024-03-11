@@ -162,49 +162,49 @@ async function createBot(nickbot) {
       //   channel.send(message);
       // }
 
-      if (message.includes(`[PARTY] Reuzing: frente`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: frente`)) {
         bot.setControlState("forward", true);
         setTimeout(() => {
           bot.setControlState("forward", false);
         }, 5000);
       }
 
-      if (message.includes(`[PARTY] Reuzing: atacar`)) {
-        const playerName = message.split(`[PARTY] Reuzing: atacar`)[1].trim();
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: atacar`)) {
+        const playerName = message.split(`[PARTY] VcVaiTomaDoxxing: atacar`)[1].trim();
         const player = bot.players[playerName];
 
         bot.pvp.attack(player.entity);
       }
 
-      if (message.includes(`[PARTY] Reuzing: stop`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: stop`)) {
         console.log("stop");
         bot.pvp.stop();
         bot.pvp.forceStop();
       }
 
-      if (message.includes(`[PARTY] Reuzing: escuta`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: escuta`)) {
         const myGoal = new GoalNear(13, 74, 4, 1);
         await bot.pathfinder.goto(myGoal);
         bot.setControlState("jump", true);
       }
 
-      if (message.includes(`[PARTY] Reuzing: spawn`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: spawn`)) {
         const myGoal = new GoalNear(9, 73, 2, 1);
         await bot.pathfinder.goto(myGoal);
         await bot.look(0, 0);
       }
 
-      if (message.includes(`[PARTY] Reuzing: lobby`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: lobby`)) {
         bot.chat("/lobby");
       }
 
-      if (message.includes(`[PARTY] Reuzing: sp`)) {
+      if (message.includes(`[PARTY] VcVaiTomaDoxxing: sp`)) {
         bot.chat("/spawn");
       }
 
       if (message.includes("aceita")) {
         console.log("aceita party");
-        bot.chat("/party aceitar FL0RASTEY_");
+        bot.chat("/party aceitar VcVaiTomaDoxxing");
       }
     }
   });
