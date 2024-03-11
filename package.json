@@ -5,8 +5,11 @@
     "mineflayer": "^4.20.0",
     "mineflayer-pathfinder": "^2.4.5",
     "mineflayer-pvp": "^1.3.2",
+    "mineflayer-tps": "^1.0.1",
     "mineflayer-web-inventory": "^1.8.4",
-    "prismarine-viewer": "^1.28.0"
+    "prismarine-viewer": "^1.28.0",
+    "socks": "^2.8.1",
+    "socks5-client": "^1.2.8"
   },
   "name": "mush-bot"
 }
