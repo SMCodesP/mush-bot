@@ -204,7 +204,7 @@ async function createBot(nickbot) {
 
       if (message.includes("aceita")) {
         console.log("aceita party");
-        bot.chat("/party aceitar Reuzing");
+        bot.chat("/party aceitar FL0RASTEY_");
       }
     }
   });
@@ -228,6 +228,7 @@ recursiveTryCreateBot("Zinggoi");
 recursiveTryCreateBot("Zyeyummy");
 recursiveTryCreateBot("MVSebt");
 recursiveTryCreateBot("Remingtonoff");
+// /party invite LokiDora Zingkun Zinggoi Zyeyummy MVSebt Remingtonoff
 // recursiveTryCreateBot("Bustlinglitz");
 // recursiveTryCreateBot("SmoggyRemington");
 // recursiveTryCreateBot("Bustlingsson");
