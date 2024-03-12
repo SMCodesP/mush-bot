@@ -25,12 +25,13 @@ async function createBot(nickbot) {
     username: nickbot, // username to join as if auth is `offline`, else a unique identifier for this account. Switch if you want to change accounts
     auth: "offline", // for offline mode servers, you can set this to 'offline'
     version: "1.8.8",
-    stream: Socks.createConnection({
-      host: "131.196.199.104", // minecraft server ip
-      port: 25565,
-      socksHost: proxy[0],
-      socksPort: proxy[1],
-    }),
+    host: "131.196.199.104", // minecraft server ip
+    // host: "l.mush.com.br",
+    // stream: Socks.createConnection({
+    //   port: 25565,
+    //   socksHost: proxy[0],
+    //   socksPort: proxy[1],
+    // }),
   });
 
   bot.loadPlugin(pathfinder);
@@ -86,7 +87,7 @@ async function createBot(nickbot) {
     console.log(`Kicked ${nickbot}`);
     bot.quit("kicked");
     console.log(type);
-    createBot();
+    createBot(nickbot);
   });
 
   bot.on("error", console.log);
@@ -125,13 +126,13 @@ async function createBot(nickbot) {
         console.log(slot.slot - 36);
         bot.setQuickBarSlot(slot.slot - 36);
         bot.activateItem();
-        setTimeout(() => {
-          bot.setQuickBarSlot(0);
-        }, 100);
+        // setTimeout(() => {
+        //   bot.setQuickBarSlot(0);
+        // }, 400);
         console.log("tomei sopa e troquei para espada");
       } else {
         console.log("não tinha sopa");
-        // refil();
+        refil();
       }
     }
   });
@@ -162,49 +163,49 @@ async function createBot(nickbot) {
       //   channel.send(message);
       // }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: frente`)) {
+      if (message.includes(`FL0RASTEY_: frente`)) {
         bot.setControlState("forward", true);
         setTimeout(() => {
           bot.setControlState("forward", false);
         }, 5000);
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: atacar`)) {
-        const playerName = message.split(`[PARTY] VcVaiTomaDoxxing: atacar`)[1].trim();
+      if (message.includes(`FL0RASTEY_: atacar`)) {
+        const playerName = message.split(`FL0RASTEY_: atacar`)[1].trim();
         const player = bot.players[playerName];
 
         bot.pvp.attack(player.entity);
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: stop`)) {
+      if (message.includes(`FL0RASTEY_: stop`)) {
         console.log("stop");
         bot.pvp.stop();
         bot.pvp.forceStop();
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: escuta`)) {
+      if (message.includes(`FL0RASTEY_: escuta`)) {
         const myGoal = new GoalNear(13, 74, 4, 1);
         await bot.pathfinder.goto(myGoal);
         bot.setControlState("jump", true);
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: spawn`)) {
+      if (message.includes(`FL0RASTEY_: spawn`)) {
         const myGoal = new GoalNear(9, 73, 2, 1);
         await bot.pathfinder.goto(myGoal);
         await bot.look(0, 0);
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: lobby`)) {
+      if (message.includes(`FL0RASTEY_: lobby`)) {
         bot.chat("/lobby");
       }
 
-      if (message.includes(`[PARTY] VcVaiTomaDoxxing: sp`)) {
+      if (message.includes(`FL0RASTEY_: sp`)) {
         bot.chat("/spawn");
       }
 
       if (message.includes("aceita")) {
         console.log("aceita party");
-        bot.chat("/party aceitar VcVaiTomaDoxxing");
+        bot.chat("/party aceitar FL0RASTEY_");
       }
     }
   });
