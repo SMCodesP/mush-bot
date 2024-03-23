@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^1.6.7",
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.5",
     "mineflayer": "^4.20.0",
@@ -8,8 +9,11 @@
     "mineflayer-tps": "^1.0.1",
     "mineflayer-web-inventory": "^1.8.4",
     "prismarine-viewer": "^1.28.0",
+    "proxy-agent": "^6.4.0",
     "socks": "^2.8.1",
-    "socks5-client": "^1.2.8"
+    "socks-proxy-agent": "^8.0.2",
+    "socks5-client": "^1.2.8",
+    "tunnel": "^0.0.6"
   },
   "name": "mush-bot"
 }

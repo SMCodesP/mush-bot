@@ -1,5 +1,10 @@
-174.64.199.82:4145
-174.64.199.79:4145
-174.77.111.196:4145
-72.195.101.99:4145
-98.181.137.83:4145
+socks5h://gate.smartproxy.com:10000
+socks5h://gate.smartproxy.com:10001
+socks5h://gate.smartproxy.com:10002
+socks5h://gate.smartproxy.com:10003
+socks5h://gate.smartproxy.com:10004
+socks5h://gate.smartproxy.com:10005
+socks5h://gate.smartproxy.com:10006
+socks5h://gate.smartproxy.com:10007
+socks5h://gate.smartproxy.com:10008
+socks5h://gate.smartproxy.com:10009
