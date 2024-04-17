@@ -18,7 +18,7 @@ const heads = [
 
 // const nickbot = process.argv[2];
 
-const permmited = ["LOUISWALKERS"];
+const permmited = ["LOUISWALKERS", "FL0RASTEY_"];
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -36,7 +36,7 @@ async function createBot(nickbot) {
     // host: "penissssss.feathermc.gg",
     host: "131.196.199.104",
     checkTimeoutInterval: 120 * 1000,
-    // port: 25568,
+    port: 25568,
     // stream: Socks.createConnection({
     //   host: "mush.com.br", // minecraft server ip
     //   port: 25565,
@@ -269,7 +269,7 @@ async function createBot(nickbot) {
 
       if (message.includes("aceita")) {
         console.log("aceita party");
-        bot.chat("/party aceitar LOUISWALKERS");
+        bot.chat("/party aceitar FL0RASTEY_");
       }
 
       if (message.includes("c4")) {
