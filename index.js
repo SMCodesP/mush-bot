@@ -36,7 +36,8 @@ async function createBot(nickbot) {
     // host: "penissssss.feathermc.gg",
     host: "131.196.199.104",
     checkTimeoutInterval: 120 * 1000,
-    port: 25568,
+    port: 25565,
+    // port: 25568,
     // stream: Socks.createConnection({
     //   host: "mush.com.br", // minecraft server ip
     //   port: 25565,
@@ -187,7 +188,9 @@ async function createBot(nickbot) {
         // bot.tossStack(slot.slot);
         setTimeout(async () => {
           await dropBowl();
-          bot.setQuickBarSlot(0);
+          setTimeout(() => {
+            bot.setQuickBarSlot(0);
+          }, 200);
         }, 400);
         console.log("tomei sopa e troquei para espada");
       } else {
